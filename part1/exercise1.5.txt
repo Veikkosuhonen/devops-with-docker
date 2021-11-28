@@ -1,0 +1,2 @@
+The alpine version is only about 15 MB compared to the 83 MB ubuntu.
+The secret message is the same.

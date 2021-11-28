@@ -1,0 +1,24 @@
+After a few failed attempts (doing things in the wrong order, 
+being confused by accidental detaching from stdin...),
+I got it working by running the container with:
+
+	docker run -it -d --name e4 ubuntu \ 
+	sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+Then I entered the container with
+
+	docker exec --it e4 bash
+
+and run
+
+	apt update; apt install curl
+
+and exited the bash. Then I attached to the process with
+
+	docker attach e4
+
+and inputted 'helsinki.fi', giving me the desired result. 
+An obvious way to streamline the process would be to include the installation of dependencies
+in the initial shell script by appending to the start:
+
+	apt update; apt install curl -y;
