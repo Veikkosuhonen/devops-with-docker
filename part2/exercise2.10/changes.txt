@@ -1,0 +1,3 @@
+I rebuilt both the frontend and backend images with updated urls: 
+for the frontend, I changed REACT_BACKEND_URL to http://localhost/api from http://localhost:8080, 
+and for the backend, I changed REQUEST_ORIGIN to http://localhost from http://localhost:5000.

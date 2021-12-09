@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  frontend:
+    image: devopsdockeruh/example-frontend
+    ports:
+     - 5000:5000
+
+  backend:
+    image: devopsdockeruh/example-backend
+    ports: 
+     - 8080:8080
